@@ -1,0 +1,35 @@
+.etapi{
+    .caption{
+        @include font-family('Playfair Display', 45px, $blueColor);
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &-main{
+        @include flex(column, flex-start, center);
+        .items{
+            width: 100%;
+            margin: 20px 0;
+            h2{
+                @include font-family('Raleway', 24px, #000);
+                line-height: 17.74px;
+                font-weight: 900;
+                margin: 40px 0 40px 50px;
+                text-align: center;
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 44px;
+                    height: 3px;
+                    background: #000;
+                    @include pos-left(35px, 71px);
+                }
+            }
+            p{
+                @include font-family('Raleway', 18px, $grayColor);
+                line-height: 25px;
+                font-weight: 300;
+            }
+        }
+    }
+}

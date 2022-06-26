@@ -1,0 +1,74 @@
+@media (min-width: 768px) {
+    .otziv {
+        padding: 150px 0;
+        .caption{
+            margin: 0 0 60px 100px;
+        }
+       .container{
+           .otziv-slider{
+            .dots {
+                @include flex(row, center, center);
+                @include pos-right(105%, 35%);
+                width: auto;
+    
+                & button {
+                    font-size: 0px;
+                    width: 25px;
+                    height: 4px;
+                    background-color: $grayColor;
+                    margin: 10px 5px;
+                    cursor: pointer;
+                    padding: 0;
+                }
+    
+                & li[class=slick-active]button {
+                    background: $blueColor;
+                }
+            }
+               margin: 0 auto;
+               /* .slick-list{
+                   overflow: visible;
+               } */
+               .item{
+                  text-align: left;
+                  background-color: #fff;
+                  padding: 25px;
+                  margin: 0 90px;
+                  .text{
+                      width: 73%;
+                      position: relative;
+                  }
+                  .item__ava{
+                      @include pos-right(0%, -60%);
+                      img{
+                          width: auto;
+                          height: auto;
+                      }
+                  }
+               }
+           }
+       }
+    }
+}
+@media (min-width: 1200px) {
+    .otziv{
+        .caption{
+            margin: 0 0 100px 100px;
+        }
+       .container{
+           .otziv-slider{
+               max-width: 900px;
+               .dots{
+                @include pos-right(115%, 43%);
+
+               }
+               .item{
+                   margin: 0 100px;
+                   .item__ava{
+                      @include pos-right(5%, -60%);
+                   }
+               }
+           }
+       }
+    }
+}

@@ -1,0 +1,23 @@
+.features{
+    padding: 50px 5px 50px 5px;
+    .container{
+        .features-main{
+            @include flex(column, center, center);
+            .item{
+                text-align: left;
+                h2{
+                    @include font-family('Playfair Display', 85.43px, $orangeColor);
+                }
+                span{
+                    @include font-family('Raleway', 24px, #000);
+                    font-weight:600;
+                }
+                p{
+                    @include font-family('Raleway', 18px, $grayColor);
+                    line-height: 25px;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

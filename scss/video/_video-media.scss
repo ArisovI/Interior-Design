@@ -1,0 +1,18 @@
+@media (min-width: 768px){
+.video{
+    .icon{
+        span{
+            padding: 30px;
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+    }
+}
+}
+@media (min-width: 1200px){
+    .video{
+        .icon{
+            height: 99.5%;
+        }
+    }
+}

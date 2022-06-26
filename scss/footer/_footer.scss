@@ -1,0 +1,35 @@
+.footer {
+    @include flex(column, center, center);
+    background-color: $blueColor;
+    padding: 50px 0;
+
+    &__logo {
+        @include flex(column, center, center);
+        a{
+            img{
+                margin: 0 0 0 30px;
+            }
+        }
+        &-social {
+            @include flex(row, space-between, center);
+            width: 100%;
+            a{
+                span{
+                    color: #fff;
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+
+    div {
+        margin: 20px 0;
+        text-align: center;
+
+        a {
+            @include font-family('Raleway', 20px, $orangeColor);
+            line-height: 30px;
+            font-weight: 600;
+        }
+    }
+}

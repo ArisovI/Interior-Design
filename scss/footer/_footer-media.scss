@@ -1,0 +1,9 @@
+@media (min-width: 768px){
+    .footer{
+        padding:  0;
+        .container{
+            @include flex(row,space-between,center);
+            width: 100%;
+        }
+    }
+}

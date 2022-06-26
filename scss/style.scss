@@ -1,0 +1,27 @@
+/* ----------HTML---------- */
+
+@import 'mixins';
+@import 'varibales';
+@import 'fonts';
+@import 'reset';
+
+/* ----------BODY---------- */
+
+@import 'header/header';
+@import 'header/header-media';
+@import 'features/features';
+@import 'features/features-media';
+@import 'portfolio/portfolio';
+@import 'portfolio/portfolio-media';
+@import 'uslugi/uslugi';
+@import 'uslugi/uslugi-media';
+@import 'video/video';
+@import 'video/video-media';
+@import 'etapi/etapi';
+@import 'etapi/etapi-media';
+@import 'mechta/mechta';
+@import 'mechta/mechta-media';
+@import 'otziv/otziv';
+@import 'otziv/otziv-media';
+@import 'footer/footer';
+@import 'footer/footer-media';

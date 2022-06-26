@@ -1,0 +1,48 @@
+@media (min-width: 768px){
+    .etapi{
+        .caption{
+            text-align: left;
+        }
+        &-main{
+            @include flex(row, space-between,center);
+            flex-wrap: wrap;
+            padding: 0 60px;
+            .items{
+                width: 45%;
+                margin: 30px 0;
+                h2{
+                    text-align: left;
+                    &::before{
+                        content: '1';
+                        @include pos-left(-11px, -50px);
+                        padding: 10px 12px;
+                        border-radius: 50%;
+                        background-color: #fdc292be;
+                    }
+                    &::after{
+                    @include pos-left(35px, 4px);
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+    .etapi{
+        padding: 50px 0 50px 0;
+        &-main{
+            @include flex(row, space-between,center);
+            flex-wrap: wrap;
+            padding: 0;
+            .items{
+                width: 30%;
+                h2{
+                    font-size: 22px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

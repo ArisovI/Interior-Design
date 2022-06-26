@@ -1,0 +1,134 @@
+.header {
+    position: relative;
+    &-img {
+        img {
+            height: 610px;
+            width: 100%;
+        }
+    }
+
+    .container{
+        .header-main {
+            .header-main__content {
+                .logo {
+                    @include pos-left(10px, 10px);
+                    cursor: pointer;
+                }
+    
+                .phone{
+                    display: none;
+                }
+    
+                .hamburger {
+    
+                    input[type=checkbox] {
+                        display: none;
+                    }
+    
+                    label {
+    
+                        span,
+                        span::after,
+                        span::before {
+                            content: '';
+                            @include pos-right(25px, 20px);
+                            width: 30px;
+                            height: 3px;
+                            border-radius: 5px;
+                            background-color: $whiteColor;
+                            cursor: pointer;
+                            z-index: 5;
+                            transition: 0.5s;
+                        }
+    
+                        span::after {
+                            right: 0;
+                            top: 8px;
+                        }
+    
+                        span::before {
+                            top: -8px;
+                            right: 0;
+                        }
+                    }
+                    
+                    input:checked ~ label span{
+                        transform: rotate(45deg);
+                    }
+                    input:checked ~ label span::before{
+                        transform: rotate(45deg);
+                        opacity: 0;
+                    }
+                    input:checked ~ label span::after{
+                        transform: rotate(90deg);
+                        top: 0;
+                    }
+    
+                    input:checked ~ ul{
+                        left: -0%;
+                    }
+    
+                    ul {
+                        @include flex(column, center, center);
+                        @include pos-left(-5px, -100%);
+                        width: 100%;
+                        height: 100%;
+                        background-color: $blueColor;
+                        z-index: 2;
+                        transition: 1s;
+                        li{
+                            margin: 15px 0;
+                            a{
+                                @include font-family('Raleway', 20px, $whiteColor);
+                                line-height: 42px;
+                                font-weight: 900;
+                                text-transform: uppercase;
+                                span{
+                                    margin: 0 15px;
+                                }
+                                &:hover {
+                                    color: $orangeColor;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .text {
+                    @include pos-left(0, 0);
+                    width: 100%;
+                    height: 100%;
+                    @include flex(column, center, center);
+                    padding: 10px;
+                    text-align: center;
+                    h2{
+                        @include font-family('Playfair Display', 48px, $whiteColor);
+                        line-height: 48.19px;
+                        font-weight: 900;
+                    }
+                    p{
+                        @include font-family('MullerLight', 18px, $whiteColor);
+                        line-height: auto;
+                        margin: 25px 0;
+                    }
+                    input[type=submit]{
+                        padding: 20px 40px;
+                        background-color: $orangeColor;
+                        text-transform: uppercase;
+                        font-weight: 900;
+                        @include font-family('Raleway', 14px, $whiteColor);
+                        line-height: auto;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+    
+                .main-slider{
+                    .slider {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

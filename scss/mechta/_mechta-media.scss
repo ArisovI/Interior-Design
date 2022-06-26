@@ -1,0 +1,44 @@
+@media (min-width: 768px){
+    .mechta{
+        &-text{
+            &__inner{
+                .name,
+                .phone,
+                .email{
+                    width: 80%;
+                }
+                .btn{
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+    .mechta{
+        @include flex(row,center,center);
+        height: 100%;
+        &-text{
+        @include flex(row,center,center);
+        background-color: $blueColor;
+            width: 50%;
+            height: 716px;
+            &__inner{
+                width: 70%;
+                padding: 100px 0;
+                background-color: none;
+                height: 100%;
+            }
+        }
+        &-picture{
+            display: block;
+            width: 50%;
+            height: 716px;
+            img{
+                width: 100%;
+            display: block;
+            height: 100%;
+            }
+        }
+    }
+}
